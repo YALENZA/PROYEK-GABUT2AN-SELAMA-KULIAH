@@ -22,6 +22,9 @@ for item in isi_folder:
         # misahin nama file dan ekstensinya 
         nama, ekstensi = os.path.splitext(item)
 
+        if ekstensi == ".py":
+            continue  
+
         # pencegahan jika ekstensi tidak ada di dictionary
         folder_tujuan = sortingan_folder.get(ekstensi, "lainnya")
         # ngebuat folder baru kalo folder tujuan belum ada
